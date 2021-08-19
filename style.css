@@ -1,0 +1,542 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.full-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* СТИЛИЗАЦИЯ ШАПКИ */
+
+.header {
+    height: 200px;
+    padding-top: 50px;
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+    background: rgba(255, 255, 255, 1);
+}
+
+.header input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-radius: 50px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 44px;
+    padding-right: 16px;
+    background-image: url('./icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: 16px;
+    font-size: 18px;
+}
+
+.header input::placeholder {
+    font-size: 18px;
+}
+
+.header input:focus {
+    outline: none;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+    margin-bottom: 31px;
+}
+
+
+
+
+/* СТИЛИЗАЦИЯ МЕНЮ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 240px;
+  background: rgba(243, 244, 249, 1);
+  padding: 40px 40px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+
+/* .sidebar.open{
+  width: 240px;
+} */
+
+.sidebar .logo-details{
+  height: 60px;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.sidebar .logo-details .icon{
+  opacity: 1;
+  transition: all 0.5s ease;
+  margin-right: 16px;
+  width: 50px;
+}
+
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+  color: rgba(51, 51, 51, 1);
+}
+
+.sidebar.open .logo-details .logo_name {
+  font-size: 16px;
+}
+
+.logo_name {
+    opacity: 1;
+}
+
+.sidebar li a svg path {
+    transition: all .2s linear;
+}
+
+.sidebar li a:hover .links_name{
+    color: rgba(52, 171, 224, 1);
+}
+
+.sidebar li a:hover svg path{
+    stroke: rgba(52, 171, 224, 1);
+}
+
+.sidebar li a:hover .line {
+  opacity: 1;
+}
+
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: -70;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 35px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.sidebar #ledge {
+  position: absolute;
+  top: 50%;
+  right: -85;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+
+.sidebar svg{
+  height: 24px;
+  min-width: 24px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.sidebar .nav-list{
+  height: 100%;
+}
+
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  margin-bottom: 40px;
+}
+
+.sidebar li a .links_name{
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 1;
+  color: rgba(51, 51, 51, 1);
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover svg{
+  transition: all 0.5s ease;
+}
+
+.sidebar li svg{
+  height: 24px;
+  width: 24px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.line {
+  position: relative;
+  left: -39px;
+  width: 2px;
+  height: 22px;
+  background: rgba(52, 171, 224, 1);
+  opacity: 0;
+  transition: all .2s linear;
+}
+
+
+/* СТИЛИЗАЦИЯ ОСНОВНОГО КОНТЕНТА */
+
+article {
+    background: #eeeeee;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.coupons {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 160px;
+    border: 1px solid #eeeeee;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 10px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: all .2s linear;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card .card-elements {
+    height: calc(160px - 16px - 16px);
+    display: flex;
+    margin-top: 16px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 0;
+    height: 16px;
+    font-weight: normal;
+    line-height: 16px;
+}
+
+.card .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.card .description {
+    font-size: 16px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.card .num {
+    height: 28px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 28px;
+    color: #DF212D;;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.card .label {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.card:hover {
+    border: 1px solid red;
+}
+
+
+
+/* НАСТРОЙКА АДАПТИВА ПОД (768px - 1024px) */
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+    article {
+        width: calc(100% - 105px);
+        margin-left: auto;
+    }
+
+    .header {
+        width: calc(100% - 105px);
+        margin-left: auto;
+        height: 180px;
+    }
+
+    .header h1 {
+        text-align: right;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 105px;
+    }
+
+    .sidebar .logo-details #btn{
+      position: absolute;
+      top: 50%;
+      right: -70px;
+      transform: translateY(-50%);
+      font-size: 22px;
+      transition: all 0.4s ease;
+      font-size: 35px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      opacity: 1;
+      z-index: 1000;
+    }
+
+    .sidebar.open{
+      width: 240px;
+    }
+
+    .sidebar #ledge {
+      position: absolute;
+      top: 50%;
+      right: -85px;
+      transform: translateY(-50%);
+      font-size: 22px;
+      transition: all 0.4s ease;
+      font-size: 23px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      opacity: 1;
+    }
+
+    .line {
+      min-width: 2px;
+    }
+
+    .sidebar .logo-details .icon{
+      width: 24px;
+    }
+
+    .sidebar.open .logo-details .logo_name {
+      font-size: 14px;
+    }
+
+    .logo_name {
+      opacity: 0;
+    }
+
+    .sidebar li a .links_name{
+        opacity: 0;
+    }
+
+    .card {
+        width: 298px;
+    }
+
+    .container {
+        width: 615px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card .description {
+        font-size: 14px;
+    }
+}
+
+
+
+/* НАСТРОЙКА АДАПТИВА ПОД (320px - 568px) */
+
+@media screen and (max-width: 568px) and (min-width: 320px) {
+  article {
+    width: calc(100% - 12px);
+    margin-left: auto;
+  }
+
+  .header {
+      width: calc(100% - 12px);
+      margin-left: auto;
+      height: 170px;
+      padding-top: 50px;
+  }
+
+  .header h1 {
+      text-align: right;
+      margin-bottom: 20px;
+  }
+
+  .header input::placeholder {
+    font-size: 14px;
+}
+
+  .main-content {
+      width: 100%;
+  }
+
+  .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 12px;
+      padding: 0;
+  }
+
+  .sidebar.open{
+    width: 190px;
+  }
+
+  .sidebar .logo-details #btn{
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 35px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  .sidebar #ledge {
+    position: absolute;
+    top: 60%;
+    right: -15px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    opacity: 1;
+  }
+
+  .sidebar .logo-details .icon{
+    width: 24px;
+    opacity: 0;
+  }
+
+  .sidebar .logo-details {
+    position: relative;
+    top: 20px;
+    left: 30px;
+  }
+
+  .sidebar.open .logo-details .logo_name {
+    font-size: 14px;
+  }
+
+  .logo_name {
+    opacity: 0;
+  }
+
+  .sidebar li a .links_name{
+      opacity: 0;
+  }
+
+  .card {
+      width: 270px;
+  }
+
+  .card p {
+    font-size: 12px;
+}
+
+  .container {
+      width: 270px;
+  }
+
+  .card .description {
+      font-size: 12px;
+  }
+
+  .sidebar svg{
+    opacity: 0;
+  }
+
+  .line {
+    position: relative;
+    left: 1px;
+  }
+
+}
